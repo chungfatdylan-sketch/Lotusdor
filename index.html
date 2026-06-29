@@ -14,26 +14,27 @@
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#accueil" aria-label="Lotus D'or accueil">
+      <a class="brand" href="#accueil" aria-label="Lotus D'or accueil" data-i18n-aria="brandAria">
         <img class="brand-logo-mark" src="assets/logo-lotus-dor.png" alt="" />
         <span>
           <strong>Lotus D'or</strong>
-          <small>Jouets & playgrounds</small>
+          <small data-i18n="brandLine">Jouets & playgrounds</small>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle data-i18n-aria="openMenu">
         <span></span>
         <span></span>
       </button>
       <nav class="main-nav" data-nav>
-        <a href="#apropos">À propos</a>
-        <a href="#gammes">Gammes</a>
-        <a href="#marques">Marques</a>
-        <a href="#produits">Produits</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#projets">Projets</a>
-        <a href="#locations">Locations</a>
-        <a href="#contact">Contact</a>
+        <a href="#apropos" data-i18n="navAbout">À propos</a>
+        <a href="#gammes" data-i18n="navRanges">Gammes</a>
+        <a href="#marques" data-i18n="navBrands">Marques</a>
+        <a href="#produits" data-i18n="navProducts">Produits</a>
+        <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+        <a href="#projets" data-i18n="navProjects">Projets</a>
+        <a href="#locations" data-i18n="navLocations">Localisation</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">EN</button>
       </nav>
     </header>
 
@@ -42,14 +43,14 @@
         <img src="assets/hero-lotus-dor.svg" alt="" class="hero-image" />
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">Distribution à l'île Maurice</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Distribution à l'île Maurice</p>
           <h1>Lotus D'or</h1>
-          <p class="hero-copy">
+          <p class="hero-copy" data-i18n="heroCopy">
             Une large sélection de produits pour enfants, du premier âge aux grands espaces de jeu.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#gammes">Voir les gammes</a>
-            <a class="button secondary" href="#contact">Demander un devis</a>
+            <a class="button primary" href="#gammes" data-i18n="heroPrimary">Voir les gammes</a>
+            <a class="button secondary" href="#contact" data-i18n="heroSecondary">Demander un devis</a>
           </div>
         </div>
       </section>
@@ -57,26 +58,26 @@
       <section class="intro-band" aria-label="Points forts">
         <div class="intro-item">
           <span>01</span>
-          <strong>Produits variés</strong>
-          <p>Bébé, éducatif, jeux, figurines, construction, télécommandé et loisirs actifs.</p>
+          <strong data-i18n="introOneTitle">Produits variés</strong>
+          <p data-i18n="introOneText">Bébé, éducatif, jeux, figurines, construction, télécommandé et loisirs actifs.</p>
         </div>
         <div class="intro-item">
           <span>02</span>
-          <strong>Solutions complètes</strong>
-          <p>Des jouets en magasin jusqu'aux playgrounds et infrastructures sportives.</p>
+          <strong data-i18n="introTwoTitle">Solutions complètes</strong>
+          <p data-i18n="introTwoText">Des jouets en magasin jusqu'aux playgrounds et infrastructures sportives.</p>
         </div>
         <div class="intro-item">
           <span>03</span>
-          <strong>Service local</strong>
-          <p>Accompagnement pour les commerces, écoles, hôtels, collectivités et espaces loisirs.</p>
+          <strong data-i18n="introThreeTitle">Service local</strong>
+          <p data-i18n="introThreeText">Accompagnement pour les commerces, écoles, hôtels, collectivités et espaces loisirs.</p>
         </div>
       </section>
 
       <section class="about-section" id="apropos">
         <div class="about-copy">
-          <p class="eyebrow">À propos</p>
-          <h2>Lotus D'or, une histoire construite autour du jeu et de la famille</h2>
-          <p>
+          <p class="eyebrow" data-i18n="aboutEyebrow">À propos</p>
+          <h2 data-i18n="aboutTitle">Lotus D'or, une histoire construite autour du jeu et de la famille</h2>
+          <p data-i18n="aboutText">
             Lotus D'or est une entreprise mauricienne spécialisée dans la distribution de jouets, produits pour bébé,
             jeux éducatifs, loisirs pour enfants, playgrounds et infrastructures sportives. Son rôle est de rapprocher
             les familles, les revendeurs et les porteurs de projets d'une offre fiable, variée et adaptée au marché
@@ -86,25 +87,25 @@
 
         <div class="history-timeline" aria-label="Histoire de Lotus D'or">
           <article class="history-item">
-            <span>Départ</span>
-            <h3>Une sélection pensée pour les enfants</h3>
-            <p>
+            <span data-i18n="historyOneLabel">Départ</span>
+            <h3 data-i18n="historyOneTitle">Une sélection pensée pour les enfants</h3>
+            <p data-i18n="historyOneText">
               L'entreprise s'est développée autour d'une idée simple : proposer des produits qui accompagnent l'éveil,
               le jeu, la créativité et les moments partagés en famille.
             </p>
           </article>
           <article class="history-item">
-            <span>Évolution</span>
-            <h3>Une offre qui s'élargit</h3>
-            <p>
+            <span data-i18n="historyTwoLabel">Évolution</span>
+            <h3 data-i18n="historyTwoTitle">Une offre qui s'élargit</h3>
+            <p data-i18n="historyTwoText">
               Au fil du temps, Lotus D'or a élargi ses gammes : produits bébé, jouets éducatifs, jeux de société,
               figurines, construction, véhicules télécommandés et nouveautés saisonnières.
             </p>
           </article>
           <article class="history-item">
-            <span>Aujourd'hui</span>
-            <h3>3 outlets et des projets plus grands</h3>
-            <p>
+            <span data-i18n="historyThreeLabel">Aujourd'hui</span>
+            <h3 data-i18n="historyThreeTitle">3 outlets et des projets plus grands</h3>
+            <p data-i18n="historyThreeText">
               Avec ses outlets et son expertise dans les playgrounds et infrastructures sportives, Lotus D'or accompagne
               aussi les écoles, hôtels, collectivités et espaces de loisirs à l'île Maurice.
             </p>
@@ -114,124 +115,124 @@
 
       <section class="section" id="gammes">
         <div class="section-heading">
-          <p class="eyebrow">Catalogue</p>
-          <h2>Des gammes pour chaque âge et chaque espace</h2>
-          <p>
+          <p class="eyebrow" data-i18n="rangesEyebrow">Catalogue</p>
+          <h2 data-i18n="rangesTitle">Des gammes pour chaque âge et chaque espace</h2>
+          <p data-i18n="rangesText">
             Lotus D'or accompagne les revendeurs et porteurs de projets avec une offre pensée pour les familles,
             les écoles et les lieux recevant du public.
           </p>
         </div>
 
-        <div class="filter-bar" role="tablist" aria-label="Filtrer les gammes">
-          <button class="filter active" type="button" data-filter="all" role="tab" aria-selected="true">Tout</button>
-          <button class="filter" type="button" data-filter="indoor" role="tab" aria-selected="false">Intérieur</button>
-          <button class="filter" type="button" data-filter="outdoor" role="tab" aria-selected="false">Extérieur</button>
-          <button class="filter" type="button" data-filter="pro" role="tab" aria-selected="false">Professionnel</button>
+        <div class="filter-bar" role="tablist" aria-label="Filtrer les gammes" data-i18n-aria="filterAria">
+          <button class="filter active" type="button" data-filter="all" role="tab" aria-selected="true" data-i18n="filterAll">Tout</button>
+          <button class="filter" type="button" data-filter="indoor" role="tab" aria-selected="false" data-i18n="filterIndoor">Intérieur</button>
+          <button class="filter" type="button" data-filter="outdoor" role="tab" aria-selected="false" data-i18n="filterOutdoor">Extérieur</button>
+          <button class="filter" type="button" data-filter="pro" role="tab" aria-selected="false" data-i18n="filterPro">Professionnel</button>
         </div>
 
         <div class="product-grid">
           <article class="product-card" data-category="indoor">
             <div class="card-icon">0+</div>
-            <h3>Produits bébé</h3>
-            <p>Articles pour le premier âge, éveil, confort et accessoires adaptés aux jeunes enfants.</p>
+            <h3 data-i18n="rangeBabyTitle">Produits bébé</h3>
+            <p data-i18n="rangeBabyText">Articles pour le premier âge, éveil, confort et accessoires adaptés aux jeunes enfants.</p>
           </article>
           <article class="product-card" data-category="indoor">
             <div class="card-icon">A+</div>
-            <h3>Jouets éducatifs</h3>
-            <p>Jeux d'apprentissage, motricité, logique, créativité et découverte par le jeu.</p>
+            <h3 data-i18n="rangeEduTitle">Jouets éducatifs</h3>
+            <p data-i18n="rangeEduText">Jeux d'apprentissage, motricité, logique, créativité et découverte par le jeu.</p>
           </article>
           <article class="product-card" data-category="indoor">
             <div class="card-icon">4P</div>
-            <h3>Jeux de société</h3>
-            <p>Jeux familiaux, stratégie, cartes, puzzles et activités pour moments partagés.</p>
+            <h3 data-i18n="rangeBoardTitle">Jeux de société</h3>
+            <p data-i18n="rangeBoardText">Jeux familiaux, stratégie, cartes, puzzles et activités pour moments partagés.</p>
           </article>
           <article class="product-card" data-category="indoor">
             <div class="card-icon">RC</div>
-            <h3>Jouets variés</h3>
-            <p>Figurines, construction, véhicules télécommandés, jeux d'imitation et nouveautés saisonnières.</p>
+            <h3 data-i18n="rangeToyTitle">Jouets variés</h3>
+            <p data-i18n="rangeToyText">Figurines, construction, véhicules télécommandés, jeux d'imitation et nouveautés saisonnières.</p>
           </article>
           <article class="product-card" data-category="outdoor pro">
             <div class="card-icon">XL</div>
-            <h3>Playgrounds</h3>
-            <p>Structures de jeu pour écoles, hôtels, résidences, collectivités et espaces récréatifs.</p>
+            <h3 data-i18n="rangePlayTitle">Playgrounds</h3>
+            <p data-i18n="rangePlayText">Structures de jeu pour écoles, hôtels, résidences, collectivités et espaces récréatifs.</p>
           </article>
           <article class="product-card" data-category="outdoor pro">
             <div class="card-icon">SP</div>
-            <h3>Infrastructures sportives</h3>
-            <p>Solutions pour terrains, parcours, équipements sportifs et zones d'activité extérieure.</p>
+            <h3 data-i18n="rangeSportTitle">Infrastructures sportives</h3>
+            <p data-i18n="rangeSportText">Solutions pour terrains, parcours, équipements sportifs et zones d'activité extérieure.</p>
           </article>
         </div>
       </section>
 
       <section class="section brands-section" id="marques">
         <div class="section-heading">
-          <p class="eyebrow">Marques</p>
-          <h2>Les marques que nous représentons et que vous trouvez en shop</h2>
-          <p>
+          <p class="eyebrow" data-i18n="brandsEyebrow">Marques</p>
+          <h2 data-i18n="brandsTitle">Les marques que nous représentons et que vous trouvez en shop</h2>
+          <p data-i18n="brandsText">
             Lotus D'or met en avant une sélection de marques pour les bébés, les jouets éducatifs, les jeux, les
             loisirs et les projets playground. Cette section peut accueillir les logos officiels dès qu'ils sont prêts.
           </p>
         </div>
 
-        <div class="brand-toolbar" aria-label="Types de marques">
-          <span>Marques représentées</span>
-          <span>Disponibles dans nos shops</span>
-          <span>Produits par marque à venir</span>
+        <div class="brand-toolbar" aria-label="Types de marques" data-i18n-aria="brandTypesAria">
+          <span data-i18n="brandToolbarOne">Marques représentées</span>
+          <span data-i18n="brandToolbarTwo">Disponibles dans nos shops</span>
+          <span data-i18n="brandToolbarThree">Produits par marque à venir</span>
         </div>
 
-        <div class="brand-grid" aria-label="Marques disponibles chez Lotus D'or">
+        <div class="brand-grid" aria-label="Marques disponibles chez Lotus D'or" data-i18n-aria="brandsGridAria">
           <article class="brand-card">
             <div class="brand-logo logo-playmobil">Playmobil</div>
             <h3>Playmobil</h3>
-            <p>Univers de figurines, jeux d'imagination et coffrets thématiques pour enfants.</p>
+            <p data-i18n="brandPlaymobilText">Univers de figurines, jeux d'imagination et coffrets thématiques pour enfants.</p>
             <div class="brand-meta">
-              <span>Figurines</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagFigures">Figurines</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
           <article class="brand-card">
             <div class="brand-logo logo-lego">LEGO</div>
             <h3>LEGO</h3>
-            <p>Jeux de construction, créativité, collections enfants et activités familiales.</p>
+            <p data-i18n="brandLegoText">Jeux de construction, créativité, collections enfants et activités familiales.</p>
             <div class="brand-meta">
-              <span>Construction</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagConstruction">Construction</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
           <article class="brand-card">
             <div class="brand-logo logo-ravensburger">Ravensburger</div>
             <h3>Ravensburger</h3>
-            <p>Puzzles, jeux éducatifs et jeux de société pour apprendre et jouer ensemble.</p>
+            <p data-i18n="brandRavensburgerText">Puzzles, jeux éducatifs et jeux de société pour apprendre et jouer ensemble.</p>
             <div class="brand-meta">
-              <span>Puzzles & jeux</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagPuzzles">Puzzles & jeux</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
           <article class="brand-card">
             <div class="brand-logo logo-hasbro">Hasbro</div>
             <h3>Hasbro</h3>
-            <p>Jeux de société, figurines, jeux d'action et classiques pour toute la famille.</p>
+            <p data-i18n="brandHasbroText">Jeux de société, figurines, jeux d'action et classiques pour toute la famille.</p>
             <div class="brand-meta">
-              <span>Jeux & figurines</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagGamesFigures">Jeux & figurines</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
           <article class="brand-card">
             <div class="brand-logo logo-mattel">Mattel</div>
             <h3>Mattel</h3>
-            <p>Jouets emblématiques, véhicules, poupées, jeux et nouveautés pour enfants.</p>
+            <p data-i18n="brandMattelText">Jouets emblématiques, véhicules, poupées, jeux et nouveautés pour enfants.</p>
             <div class="brand-meta">
-              <span>Jouets variés</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagVariousToys">Jouets variés</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
           <article class="brand-card">
             <div class="brand-logo logo-vtech">VTech</div>
             <h3>VTech</h3>
-            <p>Jouets électroniques, éveil, apprentissage et produits éducatifs interactifs.</p>
+            <p data-i18n="brandVtechText">Jouets électroniques, éveil, apprentissage et produits éducatifs interactifs.</p>
             <div class="brand-meta">
-              <span>Éducatif</span>
-              <span>Produits bientôt</span>
+              <span data-i18n="tagEducational">Éducatif</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
             </div>
           </article>
         </div>
@@ -239,107 +240,131 @@
 
       <section class="section products-section" id="produits">
         <div class="section-heading">
-          <p class="eyebrow">Produits</p>
-          <h2>Les produits ajoutés par l'équipe Lotus D'or</h2>
-          <p>
+          <p class="eyebrow" data-i18n="productsEyebrow">Produits</p>
+          <h2 data-i18n="productsTitle">Les produits ajoutés par l'équipe Lotus D'or</h2>
+          <p data-i18n="productsText">
             Cette zone se mettra à jour automatiquement avec les produits publiés depuis l'espace administrateur.
           </p>
         </div>
 
         <div class="live-product-grid" data-products-grid>
           <article class="live-product-card empty-state">
-            <h3>Produits bientôt disponibles</h3>
-            <p>Les produits publiés dans l'espace admin apparaîtront ici.</p>
+            <h3 data-i18n="productsEmptyTitle">Produits bientôt disponibles</h3>
+            <p data-i18n="productsEmptyText">Les produits publiés dans l'espace admin apparaîtront ici.</p>
           </article>
         </div>
       </section>
 
       <section class="split-section" id="solutions">
         <div class="split-copy">
-          <p class="eyebrow">Méthode</p>
-          <h2>Un partenaire pour choisir, fournir et équiper</h2>
-          <p>
+          <p class="eyebrow" data-i18n="solutionsEyebrow">Méthode</p>
+          <h2 data-i18n="solutionsTitle">Un partenaire pour choisir, fournir et équiper</h2>
+          <p data-i18n="solutionsText">
             Que le besoin soit un rayon jouets, une salle d'activités ou un grand espace extérieur, Lotus D'or peut
             aider à composer une sélection cohérente selon l'âge, l'espace, le budget et l'usage prévu.
           </p>
         </div>
-        <div class="steps" aria-label="Étapes de travail">
+        <div class="steps" aria-label="Étapes de travail" data-i18n-aria="stepsAria">
           <div class="step">
             <span>01</span>
-            <strong>Comprendre le besoin</strong>
-            <p>Public visé, espace disponible, fréquence d'utilisation et contraintes de sécurité.</p>
+            <strong data-i18n="stepOneTitle">Comprendre le besoin</strong>
+            <p data-i18n="stepOneText">Public visé, espace disponible, fréquence d'utilisation et contraintes de sécurité.</p>
           </div>
           <div class="step">
             <span>02</span>
-            <strong>Proposer la sélection</strong>
-            <p>Produits adaptés, volumes, catégories et options pour les projets standards ou sur mesure.</p>
+            <strong data-i18n="stepTwoTitle">Proposer la sélection</strong>
+            <p data-i18n="stepTwoText">Produits adaptés, volumes, catégories et options pour les projets standards ou sur mesure.</p>
           </div>
           <div class="step">
             <span>03</span>
-            <strong>Coordonner la livraison</strong>
-            <p>Accompagnement local pour faciliter l'approvisionnement et la mise en place.</p>
+            <strong data-i18n="stepThreeTitle">Coordonner la livraison</strong>
+            <p data-i18n="stepThreeText">Accompagnement local pour faciliter l'approvisionnement et la mise en place.</p>
           </div>
         </div>
       </section>
 
       <section class="project-band" id="projets">
         <div>
-          <p class="eyebrow">Applications</p>
-          <h2>Pour boutiques, écoles, hôtels et espaces publics</h2>
+          <p class="eyebrow" data-i18n="projectsEyebrow">Applications</p>
+          <h2 data-i18n="projectsTitle">Pour boutiques, écoles, hôtels et espaces publics</h2>
         </div>
         <div class="project-list">
-          <span>Boutiques de jouets</span>
-          <span>Crèches et écoles</span>
-          <span>Hôtels et resorts</span>
-          <span>Espaces communautaires</span>
-          <span>Clubs sportifs</span>
-          <span>Centres de loisirs</span>
+          <span data-i18n="projectShop">Boutiques de jouets</span>
+          <span data-i18n="projectSchool">Crèches et écoles</span>
+          <span data-i18n="projectHotel">Hôtels et resorts</span>
+          <span data-i18n="projectCommunity">Espaces communautaires</span>
+          <span data-i18n="projectSports">Clubs sportifs</span>
+          <span data-i18n="projectLeisure">Centres de loisirs</span>
         </div>
       </section>
 
       <section class="section locations-section" id="locations">
         <div class="section-heading">
-          <p class="eyebrow">Locations</p>
-          <h2>Retrouvez Lotus D'or dans 3 outlets</h2>
-          <p>
+          <p class="eyebrow" data-i18n="locationsEyebrow">Localisation</p>
+          <h2 data-i18n="locationsTitle">Retrouvez Lotus D'or dans 3 outlets</h2>
+          <p data-i18n="locationsText">
             Visitez l'outlet le plus pratique pour découvrir les produits disponibles et préparer vos achats ou vos
             projets d'équipement.
           </p>
         </div>
 
-        <div class="location-grid">
-          <article class="location-card">
-            <span class="location-number">01</span>
-            <h3>Outlet Lotus D'or</h3>
-            <p>Accédez rapidement à l'itinéraire et aux informations du point de vente sur Google Maps.</p>
-            <a class="map-link" href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer">
-              Ouvrir dans Google Maps
+        <div class="location-map-layout">
+          <div class="mauritius-map" aria-label="Carte de Maurice avec les outlets Lotus D'or" data-i18n-aria="mapAria">
+            <svg viewBox="0 0 520 720" role="img" aria-hidden="true" focusable="false">
+              <path
+                class="mauritius-shape"
+                d="M271 42 C334 72 382 135 394 206 C408 289 360 343 367 416 C374 490 427 542 395 607 C363 671 291 707 218 687 C145 667 88 600 73 521 C58 442 89 382 84 310 C79 238 46 166 85 105 C121 49 208 13 271 42 Z"
+              />
+              <path
+                class="mauritius-highlight"
+                d="M248 86 C297 111 330 166 335 226 C342 294 305 338 313 403 C322 474 361 522 336 571 C310 623 250 648 195 628 C139 609 104 558 96 499 C87 435 117 381 111 314 C106 250 82 181 116 132 C146 88 203 63 248 86 Z"
+              />
+            </svg>
+            <a class="map-pin pin-one" href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 1 - Google Maps" data-i18n-aria="pinOneAria">
+              <span>01</span>
             </a>
-          </article>
-          <article class="location-card">
-            <span class="location-number">02</span>
-            <h3>Outlet Lotus D'or</h3>
-            <p>Un second point de vente pour retrouver les gammes jouets, bébé et loisirs enfants.</p>
-            <a class="map-link" href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer">
-              Ouvrir dans Google Maps
+            <a class="map-pin pin-two" href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 2 - Google Maps" data-i18n-aria="pinTwoAria">
+              <span>02</span>
             </a>
-          </article>
-          <article class="location-card">
-            <span class="location-number">03</span>
-            <h3>Outlet Lotus D'or</h3>
-            <p>Un troisième outlet pour vos demandes produits et projets playground ou infrastructures sportives.</p>
-            <a class="map-link" href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer">
-              Ouvrir dans Google Maps
+            <a class="map-pin pin-three" href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 3 - Google Maps" data-i18n-aria="pinThreeAria">
+              <span>03</span>
             </a>
-          </article>
+          </div>
+
+          <div class="location-list">
+            <article class="location-card">
+              <span class="location-number">01</span>
+              <h3 data-i18n="locationOneTitle">Outlet Lotus D'or</h3>
+              <p data-i18n="locationOneText">Accédez rapidement à l'itinéraire et aux informations du point de vente sur Google Maps.</p>
+              <a class="map-link" href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer" data-i18n="openMaps">
+                Ouvrir dans Google Maps
+              </a>
+            </article>
+            <article class="location-card">
+              <span class="location-number">02</span>
+              <h3 data-i18n="locationTwoTitle">Outlet Lotus D'or</h3>
+              <p data-i18n="locationTwoText">Un second point de vente pour retrouver les gammes jouets, bébé et loisirs enfants.</p>
+              <a class="map-link" href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer" data-i18n="openMaps">
+                Ouvrir dans Google Maps
+              </a>
+            </article>
+            <article class="location-card">
+              <span class="location-number">03</span>
+              <h3 data-i18n="locationThreeTitle">Outlet Lotus D'or</h3>
+              <p data-i18n="locationThreeText">Un troisième outlet pour vos demandes produits et projets playground ou infrastructures sportives.</p>
+              <a class="map-link" href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer" data-i18n="openMaps">
+                Ouvrir dans Google Maps
+              </a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Parlons de votre demande</h2>
-          <p>
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">Parlons de votre demande</h2>
+          <p data-i18n="contactText">
             Indiquez le type de produits recherchés, le volume souhaité ou le projet à équiper. Lotus D'or vous
             répondra avec une proposition adaptée.
           </p>
@@ -351,35 +376,35 @@
         </div>
         <form class="contact-form" action="mailto:contact@lotusdor.mu" method="post" enctype="text/plain">
           <label>
-            Nom
+            <span data-i18n="formName">Nom</span>
             <input name="Nom" type="text" autocomplete="name" required />
           </label>
           <label>
-            Téléphone ou email
+            <span data-i18n="formContact">Téléphone ou email</span>
             <input name="Contact" type="text" autocomplete="email" required />
           </label>
           <label>
-            Type de besoin
+            <span data-i18n="formNeed">Type de besoin</span>
             <select name="Besoin">
-              <option>Produits bébé</option>
-              <option>Jouets et jeux</option>
-              <option>Playground</option>
-              <option>Infrastructure sportive</option>
-              <option>Autre demande</option>
+              <option data-i18n="needBaby">Produits bébé</option>
+              <option data-i18n="needToys">Jouets et jeux</option>
+              <option data-i18n="needPlayground">Playground</option>
+              <option data-i18n="needSport">Infrastructure sportive</option>
+              <option data-i18n="needOther">Autre demande</option>
             </select>
           </label>
           <label>
-            Message
+            <span data-i18n="formMessage">Message</span>
             <textarea name="Message" rows="4" required></textarea>
           </label>
-          <button class="button primary" type="submit">Envoyer la demande</button>
+          <button class="button primary" type="submit" data-i18n="formSubmit">Envoyer la demande</button>
         </form>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Lotus D'or</span>
-      <span>Distribution de jouets, playgrounds et infrastructures sportives à l'île Maurice</span>
+      <span data-i18n="footerText">Distribution de jouets, playgrounds et infrastructures sportives à l'île Maurice</span>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
