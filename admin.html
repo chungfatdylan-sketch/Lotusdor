@@ -16,11 +16,11 @@
           <strong>Lotus D'or Admin</strong>
         </a>
         <h1>Connexion administrateur</h1>
-        <p>Connecte-toi avec l'utilisateur créé dans Supabase Auth.</p>
+        <p>Accès réservé à la personne qui gère les produits Lotus D'or.</p>
         <form class="admin-form" data-login-form>
           <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required />
+            Identifiant admin
+            <input name="email" type="email" autocomplete="username" placeholder="email admin" required />
           </label>
           <label>
             Mot de passe
@@ -28,6 +28,7 @@
           </label>
           <button class="button primary" type="submit">Se connecter</button>
           <p class="admin-message" data-login-message></p>
+          <p class="admin-help">Le compte administrateur doit être créé dans Supabase Authentication.</p>
         </form>
       </section>
 
@@ -46,6 +47,10 @@
         <div class="admin-layout">
           <form class="admin-form product-editor" data-product-form>
             <input name="id" type="hidden" />
+            <div class="form-intro">
+              <h2>Ajouter un produit</h2>
+              <p>Les produits publiés apparaissent automatiquement sur le site.</p>
+            </div>
             <label>
               Nom du produit
               <input name="name" type="text" required />

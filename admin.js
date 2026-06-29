@@ -17,6 +17,17 @@ const setMessage = (element, message) => {
   element.textContent = message || "";
 };
 
+const friendlyAuthError = (message) => {
+  if (!message) return "";
+  if (message.toLowerCase().includes("invalid login credentials")) {
+    return "Identifiant ou mot de passe incorrect.";
+  }
+  if (message.toLowerCase().includes("email not confirmed")) {
+    return "L'email du compte admin doit être confirmé dans Supabase.";
+  }
+  return message;
+};
+
 const escapeHtml = (value) =>
   String(value || "")
     .replaceAll("&", "&amp;")
@@ -127,7 +138,7 @@ loginForm.addEventListener("submit", async (event) => {
   });
 
   if (error) {
-    setMessage(loginMessage, error.message);
+    setMessage(loginMessage, friendlyAuthError(error.message));
     return;
   }
 

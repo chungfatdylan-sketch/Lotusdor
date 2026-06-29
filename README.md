@@ -19,7 +19,7 @@ Le site est connecté à Supabase pour afficher les produits publiés.
 
 1. Dans Supabase, ouvrir SQL Editor.
 2. Exécuter le fichier `supabase-schema.sql`.
-3. Dans Authentication > Users, créer un utilisateur pour l'administrateur.
+3. Dans Authentication > Users, créer un utilisateur pour l'administrateur avec son email et son mot de passe.
 4. Aller sur `/admin.html` pour ajouter, modifier ou supprimer des produits.
 
 La clé privée Supabase ne doit jamais être ajoutée au code du site.
