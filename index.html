@@ -29,6 +29,7 @@
         <a href="#apropos">À propos</a>
         <a href="#gammes">Gammes</a>
         <a href="#marques">Marques</a>
+        <a href="#produits">Produits</a>
         <a href="#solutions">Solutions</a>
         <a href="#projets">Projets</a>
         <a href="#locations">Locations</a>
@@ -236,6 +237,23 @@
         </div>
       </section>
 
+      <section class="section products-section" id="produits">
+        <div class="section-heading">
+          <p class="eyebrow">Produits</p>
+          <h2>Les produits ajoutés par l'équipe Lotus D'or</h2>
+          <p>
+            Cette zone se mettra à jour automatiquement avec les produits publiés depuis l'espace administrateur.
+          </p>
+        </div>
+
+        <div class="live-product-grid" data-products-grid>
+          <article class="live-product-card empty-state">
+            <h3>Produits bientôt disponibles</h3>
+            <p>Les produits publiés dans l'espace admin apparaîtront ici.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="split-section" id="solutions">
         <div class="split-copy">
           <p class="eyebrow">Méthode</p>
@@ -362,8 +380,12 @@
     <footer class="site-footer">
       <span>Lotus D'or</span>
       <span>Distribution de jouets, playgrounds et infrastructures sportives à l'île Maurice</span>
+      <a href="admin.html">Admin</a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="products.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

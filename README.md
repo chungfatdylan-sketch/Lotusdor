@@ -12,3 +12,14 @@ Site vitrine statique pour Lotus D'or, entreprise de distribution de jouets, pro
 ## Aperçu local
 
 Ouvrir `index.html` dans un navigateur, ou servir le dossier avec un serveur local.
+
+## Administration produits
+
+Le site est connecté à Supabase pour afficher les produits publiés.
+
+1. Dans Supabase, ouvrir SQL Editor.
+2. Exécuter le fichier `supabase-schema.sql`.
+3. Dans Authentication > Users, créer un utilisateur pour l'administrateur.
+4. Aller sur `/admin.html` pour ajouter, modifier ou supprimer des produits.
+
+La clé privée Supabase ne doit jamais être ajoutée au code du site.

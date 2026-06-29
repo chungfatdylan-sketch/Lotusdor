@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | Lotus D'or</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="admin-panel" data-auth-panel>
+        <a class="admin-brand" href="index.html">
+          <span class="brand-mark">L</span>
+          <strong>Lotus D'or Admin</strong>
+        </a>
+        <h1>Connexion administrateur</h1>
+        <p>Connecte-toi avec l'utilisateur créé dans Supabase Auth.</p>
+        <form class="admin-form" data-login-form>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Mot de passe
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="button primary" type="submit">Se connecter</button>
+          <p class="admin-message" data-login-message></p>
+        </form>
+      </section>
+
+      <section class="admin-dashboard" data-dashboard hidden>
+        <div class="admin-topbar">
+          <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Gestion des produits</h1>
+          </div>
+          <div class="admin-actions">
+            <a class="button secondary admin-link" href="index.html">Voir le site</a>
+            <button class="button primary" type="button" data-logout>Déconnexion</button>
+          </div>
+        </div>
+
+        <div class="admin-layout">
+          <form class="admin-form product-editor" data-product-form>
+            <input name="id" type="hidden" />
+            <label>
+              Nom du produit
+              <input name="name" type="text" required />
+            </label>
+            <label>
+              Marque
+              <select name="brand" required>
+                <option>Playmobil</option>
+                <option>LEGO</option>
+                <option>Ravensburger</option>
+                <option>Hasbro</option>
+                <option>Mattel</option>
+                <option>VTech</option>
+                <option>Autre</option>
+              </select>
+            </label>
+            <label>
+              Catégorie
+              <input name="category" type="text" placeholder="Construction, éducatif, figurines..." />
+            </label>
+            <label>
+              Prix
+              <input name="price" type="number" min="0" step="1" placeholder="Ex: 1250" />
+            </label>
+            <label>
+              URL image
+              <input name="image_url" type="url" placeholder="https://..." />
+            </label>
+            <label>
+              Description
+              <textarea name="description" rows="4"></textarea>
+            </label>
+            <label class="checkbox-label">
+              <input name="is_published" type="checkbox" checked />
+              Publié sur le site
+            </label>
+            <div class="admin-actions">
+              <button class="button primary" type="submit">Enregistrer</button>
+              <button class="button secondary admin-reset" type="button" data-reset-form>Réinitialiser</button>
+            </div>
+            <p class="admin-message" data-product-message></p>
+          </form>
+
+          <div class="admin-list" data-product-list>
+            <p class="admin-message">Chargement des produits...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
