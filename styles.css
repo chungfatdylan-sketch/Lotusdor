@@ -66,17 +66,15 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 180px;
+  min-width: 210px;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  font-weight: 900;
+.brand-logo-mark {
+  display: block;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  object-fit: contain;
 }
 
 .brand strong,
