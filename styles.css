@@ -170,7 +170,7 @@ a {
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 34px;
   color: var(--gold);
   font-size: 0.78rem;
   font-weight: 900;
@@ -181,7 +181,7 @@ a {
 .hero h1 {
   margin: 0;
   font-family: "Waltograph", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(4.2rem, 12vw, 10rem);
+  font-size: clamp(4.2rem, 10vw, 8.5rem);
   font-weight: 400;
   line-height: 0.8;
   letter-spacing: 0;
@@ -899,7 +899,7 @@ textarea {
   }
 
   .hero h1 {
-    font-size: clamp(3.6rem, 18vw, 6.6rem);
+    font-size: clamp(3.4rem, 16vw, 5.8rem);
   }
 
   .intro-band,
