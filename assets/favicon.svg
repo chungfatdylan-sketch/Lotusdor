@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lotus D'or">
+  <rect width="64" height="64" rx="32" fill="#c91f2d"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#d8a229" stroke-width="4"/>
+  <path d="M31 18h5v23h12v5H31z" fill="#fffdf8"/>
+  <path d="M17 43c7-2 12-7 15-16 4 8 9 13 15 16-11 4-20 4-30 0z" fill="#d8a229"/>
+</svg>
