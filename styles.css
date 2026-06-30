@@ -199,10 +199,10 @@ a {
 
 .hero h1 {
   margin: 0;
-  font-family: "Waltograph", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(4.2rem, 10vw, 8.5rem);
-  font-weight: 400;
-  line-height: 0.8;
+  max-width: 900px;
+  font-size: clamp(3rem, 7vw, 6.8rem);
+  font-weight: 950;
+  line-height: 0.92;
   letter-spacing: 0;
 }
 
@@ -251,7 +251,7 @@ a {
 
 .intro-band {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--line);
 }
@@ -259,6 +259,49 @@ a {
 .intro-item {
   padding: clamp(24px, 4vw, 44px);
   background: #ffffff;
+}
+
+.main-categories {
+  background: #ffffff;
+}
+
+.why-section {
+  background: #fff0dc;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.category-card {
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid rgba(201, 31, 45, 0.16);
+  border-radius: 8px;
+  background: #fff7ea;
+  box-shadow: 0 14px 36px rgba(143, 23, 35, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 46px rgba(143, 23, 35, 0.12);
+}
+
+.category-card span {
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.category-card strong {
+  font-size: clamp(1.35rem, 2.6vw, 2.2rem);
+  line-height: 1;
 }
 
 .intro-item span,
@@ -562,6 +605,10 @@ a {
 
 .logo-ravensburger {
   background: linear-gradient(135deg, #2f8fbe, #1457a8);
+}
+
+.logo-majorette {
+  background: linear-gradient(135deg, #2447a8, #d8242f);
 }
 
 .logo-hasbro {
@@ -876,7 +923,6 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  margin-top: auto;
   padding: 0 16px;
   border: 1px solid rgba(201, 31, 45, 0.2);
   border-radius: 999px;
@@ -888,6 +934,25 @@ a {
 .map-link:hover {
   color: #ffffff;
   background: var(--red);
+}
+
+.store-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.whatsapp-link {
+  color: #0b7a45;
+  border-color: rgba(20, 169, 139, 0.28);
+  background: #edfff7;
+}
+
+.whatsapp-link:hover {
+  color: #ffffff;
+  background: var(--mint);
 }
 
 .contact-section {
@@ -1009,10 +1074,11 @@ textarea {
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 16vw, 5.8rem);
+    font-size: clamp(2.55rem, 11vw, 4.8rem);
   }
 
   .intro-band,
+  .category-grid,
   .product-grid,
   .brand-grid,
   .live-product-grid,
@@ -1062,13 +1128,15 @@ textarea {
     padding-right: 16px;
   }
 
-  .brand-grid {
+  .brand-grid,
+  .category-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 420px) {
   .brand-grid,
+  .category-grid,
   .live-product-grid {
     grid-template-columns: 1fr;
   }
