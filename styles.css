@@ -174,12 +174,13 @@ a {
 
 .hero-image {
   object-fit: cover;
+  object-position: center center;
 }
 
 .hero-shade {
   background:
-    linear-gradient(90deg, rgba(84, 13, 22, 0.88) 0%, rgba(116, 31, 28, 0.64) 42%, rgba(30, 22, 18, 0.18) 100%),
-    linear-gradient(0deg, rgba(65, 12, 20, 0.42), rgba(65, 12, 20, 0.05));
+    linear-gradient(90deg, rgba(84, 13, 22, 0.82) 0%, rgba(116, 31, 28, 0.58) 42%, rgba(30, 22, 18, 0.1) 100%),
+    linear-gradient(0deg, rgba(65, 12, 20, 0.36), rgba(65, 12, 20, 0.02));
 }
 
 .hero-content {
