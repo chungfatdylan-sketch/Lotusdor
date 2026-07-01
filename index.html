@@ -9,7 +9,8 @@
       content="Lotus D'or distribue à l'île Maurice des produits bébé, jouets éducatifs, jeux de société, jouets, playgrounds et infrastructures sportives."
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="image" href="assets/hero-storefront.png" />
+    <link rel="preload" as="image" href="assets/hero-storefront-straight.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -39,7 +40,7 @@
 
     <main>
       <section class="hero" id="accueil" aria-label="Présentation Lotus D'or">
-        <img src="assets/hero-storefront.png" alt="Devanture et intérieur du magasin Lotus D'or" class="hero-image" />
+        <img src="assets/hero-storefront-straight.png" alt="Devanture et intérieur du magasin Lotus D'or" class="hero-image" />
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow" data-i18n="heroEyebrow">Lotus D'or Maurice</p>
@@ -368,33 +369,22 @@
         </div>
 
         <div class="location-map-layout">
-          <div class="mauritius-map" aria-label="Carte de Maurice avec les outlets Lotus D'or" data-i18n-aria="mapAria">
-            <svg viewBox="0 0 520 720" role="img" aria-hidden="true" focusable="false">
-              <path
-                class="mauritius-shape"
-                d="M271 42 C334 72 382 135 394 206 C408 289 360 343 367 416 C374 490 427 542 395 607 C363 671 291 707 218 687 C145 667 88 600 73 521 C58 442 89 382 84 310 C79 238 46 166 85 105 C121 49 208 13 271 42 Z"
-              />
-              <path
-                class="mauritius-highlight"
-                d="M248 86 C297 111 330 166 335 226 C342 294 305 338 313 403 C322 474 361 522 336 571 C310 623 250 648 195 628 C139 609 104 558 96 499 C87 435 117 381 111 314 C106 250 82 181 116 132 C146 88 203 63 248 86 Z"
-              />
-            </svg>
-            <a class="map-pin pin-one" href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 1 - Google Maps" data-i18n-aria="pinOneAria">
-              <span>01</span>
-            </a>
-            <a class="map-pin pin-two" href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 2 - Google Maps" data-i18n-aria="pinTwoAria">
-              <span>02</span>
-            </a>
-            <a class="map-pin pin-three" href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer" aria-label="Outlet Lotus D'or 3 - Google Maps" data-i18n-aria="pinThreeAria">
-              <span>03</span>
-            </a>
+          <div class="mauritius-map" aria-label="Carte de l'île Maurice avec les magasins Lotus D'or" data-i18n-aria="mapAria">
+            <div id="lotus-stores-map" class="store-map-canvas"></div>
+            <noscript>
+              <div class="map-fallback">
+                <a href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer">01 — Tribeca Mall</a>
+                <a href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer">02 — Port-Louis</a>
+                <a href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer">03 — Rivière Noire / Baby Lotus D'or</a>
+              </div>
+            </noscript>
           </div>
 
           <div class="location-list">
             <article class="location-card">
               <span class="location-number">01</span>
               <h3 data-i18n="locationOneTitle">Tribeca Mall</h3>
-              <p data-i18n="locationOneText">Un magasin pratique pour retrouver les jouets, nouveautés, marques et idées cadeaux.</p>
+              <p data-i18n="locationOneText">Notre magasin phare, offrant la plus vaste sélection de jouets, produits bébé et marques internationales dans un environnement moderne pensé pour toute la famille.</p>
               <div class="store-actions">
                 <a class="map-link" href="https://maps.app.goo.gl/q9X2GbiPa9SifYKn7" target="_blank" rel="noreferrer" data-i18n="openMaps">
                   Google Maps
@@ -405,7 +395,7 @@
             <article class="location-card">
               <span class="location-number">02</span>
               <h3 data-i18n="locationTwoTitle">Port-Louis</h3>
-              <p data-i18n="locationTwoText">Retrouvez nos gammes jouets, jeux, produits bébé et marques internationales en ville.</p>
+              <p data-i18n="locationTwoText">Notre magasin historique au cœur de la capitale, où Lotus D’Or accompagne les familles mauriciennes depuis plus de 50 ans.</p>
               <div class="store-actions">
                 <a class="map-link" href="https://maps.app.goo.gl/rcr5eY8CigBYeZD9A" target="_blank" rel="noreferrer" data-i18n="openMaps">
                   Google Maps
@@ -416,7 +406,7 @@
             <article class="location-card">
               <span class="location-number">03</span>
               <h3 data-i18n="locationThreeTitle">Rivière Noire / Baby Lotus D'or</h3>
-              <p data-i18n="locationThreeText">Une adresse dédiée aux familles, aux produits bébé et aux besoins enfants du quotidien.</p>
+              <p data-i18n="locationThreeText">Notre destination sur la côte Ouest, proposant une sélection premium de jouets, produits bébé et grandes marques internationales pour toute la famille.</p>
               <div class="store-actions">
                 <a class="map-link" href="https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7" target="_blank" rel="noreferrer" data-i18n="openMaps">
                   Google Maps
@@ -476,6 +466,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="supabase-config.js"></script>
     <script src="products.js"></script>
     <script src="script.js"></script>

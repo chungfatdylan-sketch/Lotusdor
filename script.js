@@ -127,16 +127,16 @@ const translations = {
     locationsEyebrow: "Visit our stores",
     locationsTitle: "Tribeca Mall, Port-Louis et Rivière Noire",
     locationsText: "Passez en magasin pour découvrir les produits, demander conseil, ouvrir Google Maps ou nous contacter sur WhatsApp.",
-    mapAria: "Carte de Maurice avec les outlets Lotus D'or",
-    pinOneAria: "Outlet Lotus D'or 1 - Google Maps",
-    pinTwoAria: "Outlet Lotus D'or 2 - Google Maps",
-    pinThreeAria: "Outlet Lotus D'or 3 - Google Maps",
+    mapAria: "Carte de l'île Maurice avec les magasins Lotus D'or",
+    pinOneAria: "Tribeca Mall - Google Maps",
+    pinTwoAria: "Port-Louis - Google Maps",
+    pinThreeAria: "Rivière Noire / Baby Lotus D'or - Google Maps",
     locationOneTitle: "Tribeca Mall",
-    locationOneText: "Un magasin pratique pour retrouver les jouets, nouveautés, marques et idées cadeaux.",
+    locationOneText: "Notre magasin phare, offrant la plus vaste sélection de jouets, produits bébé et marques internationales dans un environnement moderne pensé pour toute la famille.",
     locationTwoTitle: "Port-Louis",
-    locationTwoText: "Retrouvez nos gammes jouets, jeux, produits bébé et marques internationales en ville.",
+    locationTwoText: "Notre magasin historique au cœur de la capitale, où Lotus D’Or accompagne les familles mauriciennes depuis plus de 50 ans.",
     locationThreeTitle: "Rivière Noire / Baby Lotus D'or",
-    locationThreeText: "Une adresse dédiée aux familles, aux produits bébé et aux besoins enfants du quotidien.",
+    locationThreeText: "Notre destination sur la côte Ouest, proposant une sélection premium de jouets, produits bébé et grandes marques internationales pour toute la famille.",
     openMaps: "Google Maps",
     contactEyebrow: "Contact",
     contactTitle: "Parlons de votre demande",
@@ -274,16 +274,16 @@ const translations = {
     locationsEyebrow: "Visit our stores",
     locationsTitle: "Tribeca Mall, Port-Louis and Rivière Noire",
     locationsText: "Visit a store to discover products, ask for advice, open Google Maps or contact us on WhatsApp.",
-    mapAria: "Map of Mauritius with Lotus D'or outlets",
-    pinOneAria: "Lotus D'or outlet 1 - Google Maps",
-    pinTwoAria: "Lotus D'or outlet 2 - Google Maps",
-    pinThreeAria: "Lotus D'or outlet 3 - Google Maps",
+    mapAria: "Map of Mauritius with Lotus D'or stores",
+    pinOneAria: "Tribeca Mall - Google Maps",
+    pinTwoAria: "Port-Louis - Google Maps",
+    pinThreeAria: "Rivière Noire / Baby Lotus D'or - Google Maps",
     locationOneTitle: "Tribeca Mall",
-    locationOneText: "A convenient store for toys, new arrivals, brands and gift ideas.",
+    locationOneText: "Our flagship store, offering the widest selection of toys, baby products and international brands in a modern environment designed for the whole family.",
     locationTwoTitle: "Port-Louis",
-    locationTwoText: "Find our toys, games, baby products and international brands in the city.",
+    locationTwoText: "Our historic store in the heart of the capital, where Lotus D’Or has supported Mauritian families for over 50 years.",
     locationThreeTitle: "Rivière Noire / Baby Lotus D'or",
-    locationThreeText: "A store dedicated to families, baby products and everyday children's needs.",
+    locationThreeText: "Our West Coast destination, offering a premium selection of toys, baby products and major international brands for the whole family.",
     openMaps: "Google Maps",
     contactEyebrow: "Contact",
     contactTitle: "Tell us about your request",
@@ -330,11 +330,89 @@ const applyLanguage = (language) => {
     );
   }
 
+  refreshStoreMapLanguage(language);
   localStorage.setItem("lotusdor-language", language);
+};
+
+let storeMap;
+let storeMapMarkers = [];
+
+const storeLocations = [
+  {
+    number: "01",
+    titleKey: "locationOneTitle",
+    textKey: "locationOneText",
+    mapsUrl: "https://maps.app.goo.gl/q9X2GbiPa9SifYKn7",
+    coordinates: [-20.2241, 57.4936],
+  },
+  {
+    number: "02",
+    titleKey: "locationTwoTitle",
+    textKey: "locationTwoText",
+    mapsUrl: "https://maps.app.goo.gl/rcr5eY8CigBYeZD9A",
+    coordinates: [-20.1609, 57.5012],
+  },
+  {
+    number: "03",
+    titleKey: "locationThreeTitle",
+    textKey: "locationThreeText",
+    mapsUrl: "https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7",
+    coordinates: [-20.3605, 57.3664],
+  },
+];
+
+const createStorePopup = (location, language) => {
+  const dictionary = translations[language] || translations.fr;
+  return `
+    <div class="lotus-map-popup">
+      <strong>${location.number} — ${dictionary[location.titleKey]}</strong>
+      <span>${dictionary[location.textKey]}</span>
+      <a href="${location.mapsUrl}" target="_blank" rel="noreferrer">${dictionary.openMaps}</a>
+    </div>
+  `;
+};
+
+const refreshStoreMapLanguage = (language) => {
+  if (!storeMapMarkers.length) return;
+
+  storeMapMarkers.forEach(({ marker, location }) => {
+    marker.bindPopup(createStorePopup(location, language));
+  });
+};
+
+const initStoreMap = () => {
+  const mapElement = document.getElementById("lotus-stores-map");
+  if (!mapElement || typeof L === "undefined") return;
+
+  storeMap = L.map(mapElement, {
+    scrollWheelZoom: false,
+    zoomControl: true,
+  }).setView([-20.245, 57.49], 10);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap",
+  }).addTo(storeMap);
+
+  const markerIcon = (number) => L.divIcon({
+    className: "",
+    html: `<div class="lotus-map-marker"><span>${number}</span></div>`,
+    iconSize: [42, 42],
+    iconAnchor: [21, 42],
+    popupAnchor: [0, -38],
+  });
+
+  storeMapMarkers = storeLocations.map((location) => {
+    const marker = L.marker(location.coordinates, { icon: markerIcon(location.number) })
+      .addTo(storeMap)
+      .bindPopup(createStorePopup(location, currentLanguage));
+    return { marker, location };
+  });
 };
 
 let currentLanguage = localStorage.getItem("lotusdor-language") || "fr";
 applyLanguage(currentLanguage);
+initStoreMap();
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 20);
