@@ -973,6 +973,43 @@ a {
   color: var(--red);
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 1px solid rgba(127, 16, 24, 0.16);
+  border-radius: 999px;
+  color: var(--deep-red);
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(127, 16, 24, 0.08);
+}
+
+.social-link span {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--red);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.social-link:hover {
+  color: #ffffff;
+  background: var(--deep-red);
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
@@ -1011,10 +1048,15 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   padding: 24px clamp(20px, 6vw, 76px);
   color: rgba(255, 255, 255, 0.78);
   background: var(--deep-red);
+}
+
+.site-footer > div:first-child {
+  display: grid;
+  gap: 4px;
 }
 
 .site-footer span:first-child {
@@ -1025,6 +1067,24 @@ textarea {
 .site-footer a {
   color: #ffffff;
   font-weight: 900;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.footer-socials a {
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-socials a:hover {
+  background: rgba(255, 255, 255, 0.16);
 }
 
 @media (max-width: 860px) {
