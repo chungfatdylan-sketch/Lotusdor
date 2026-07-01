@@ -342,22 +342,22 @@ const storeLocations = [
     number: "01",
     titleKey: "locationOneTitle",
     textKey: "locationOneText",
-    mapsUrl: "https://maps.app.goo.gl/q9X2GbiPa9SifYKn7",
-    coordinates: [-20.2241, 57.4936],
+    mapsUrl: "https://maps.app.goo.gl/rcr5eY8CigBYeZD9A",
+    coordinates: [-20.2439129, 57.4981216],
   },
   {
     number: "02",
     titleKey: "locationTwoTitle",
     textKey: "locationTwoText",
-    mapsUrl: "https://maps.app.goo.gl/rcr5eY8CigBYeZD9A",
-    coordinates: [-20.1609, 57.5012],
+    mapsUrl: "https://maps.app.goo.gl/q9X2GbiPa9SifYKn7",
+    coordinates: [-20.1641762, 57.5046195],
   },
   {
     number: "03",
     titleKey: "locationThreeTitle",
     textKey: "locationThreeText",
     mapsUrl: "https://maps.app.goo.gl/c8KUn4sMrM7jsVJq7",
-    coordinates: [-20.3605, 57.3664],
+    coordinates: [-20.3617822, 57.3736467],
   },
 ];
 
@@ -408,6 +408,9 @@ const initStoreMap = () => {
       .bindPopup(createStorePopup(location, currentLanguage));
     return { marker, location };
   });
+
+  const bounds = L.latLngBounds(storeLocations.map((location) => location.coordinates));
+  storeMap.fitBounds(bounds, { padding: [42, 42] });
 };
 
 let currentLanguage = localStorage.getItem("lotusdor-language") || "fr";
