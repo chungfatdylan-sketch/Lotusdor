@@ -624,18 +624,26 @@ a {
   box-shadow: 0 20px 52px rgba(127, 16, 24, 0.13);
 }
 
+.brand-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
 .brand-logo {
-  display: grid;
-  width: 100%;
-  min-height: 96px;
+  display: inline-grid;
+  min-width: 72px;
+  min-height: 48px;
   place-items: center;
-  margin-bottom: 22px;
-  padding: 16px;
+  padding: 8px 12px;
   border-radius: 8px;
   color: #ffffff;
-  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-size: 0.82rem;
   font-weight: 950;
+  line-height: 1;
   text-align: center;
+  box-shadow: 0 10px 24px rgba(127, 16, 24, 0.12);
 }
 
 .logo-playmobil {
@@ -643,7 +651,10 @@ a {
 }
 
 .logo-lego {
-  background: linear-gradient(135deg, var(--gold), var(--red));
+  border: 3px solid #f6c400;
+  color: #ffffff;
+  background: #d71920;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .logo-ravensburger {
@@ -655,10 +666,13 @@ a {
 }
 
 .logo-hasbro {
+  border-radius: 14px 8px 14px 8px;
   background: linear-gradient(135deg, #1b83c1, #11765f);
 }
 
 .logo-mattel {
+  min-width: 58px;
+  border-radius: 50%;
   background: linear-gradient(135deg, var(--coral), var(--red));
 }
 
@@ -667,7 +681,7 @@ a {
 }
 
 .brand-card h3 {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 1.35rem;
 }
 
