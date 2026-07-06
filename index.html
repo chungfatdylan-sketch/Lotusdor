@@ -56,44 +56,6 @@
         </div>
       </section>
 
-      <section class="section main-categories" id="categories">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="categoriesEyebrow">Catégories</p>
-          <h2 data-i18n="categoriesTitle">Trouvez rapidement ce qu'il vous faut</h2>
-          <p data-i18n="categoriesText">
-            Des jouets du quotidien aux produits bébé, jeux éducatifs, jeux de société, équipements outdoor et articles
-            collector.
-          </p>
-        </div>
-
-        <div class="category-grid" aria-label="Catégories principales" data-i18n-aria="categoriesAria">
-          <a class="category-card" href="#gammes">
-            <span>01</span>
-            <strong data-i18n="categoryToys">Toys</strong>
-          </a>
-          <a class="category-card" href="#baby-products">
-            <span>02</span>
-            <strong data-i18n="categoryBaby">Baby Products</strong>
-          </a>
-          <a class="category-card" href="#gammes">
-            <span>03</span>
-            <strong data-i18n="categoryEducational">Educational Toys</strong>
-          </a>
-          <a class="category-card" href="#gammes">
-            <span>04</span>
-            <strong data-i18n="categoryBoard">Board Games</strong>
-          </a>
-          <a class="category-card" href="#gammes">
-            <span>05</span>
-            <strong data-i18n="categoryOutdoor">Outdoor & Sports</strong>
-          </a>
-          <a class="category-card" href="#collector">
-            <span>06</span>
-            <strong data-i18n="categoryCollector">Collector</strong>
-          </a>
-        </div>
-      </section>
-
       <section class="section why-section" aria-label="Pourquoi choisir Lotus D'or" data-i18n-aria="whyAria">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="whyEyebrow">Why Lotus d'Or</p>
@@ -180,6 +142,7 @@
           <button class="filter" type="button" data-filter="indoor" role="tab" aria-selected="false" data-i18n="filterIndoor">Intérieur</button>
           <button class="filter" type="button" data-filter="outdoor" role="tab" aria-selected="false" data-i18n="filterOutdoor">Extérieur</button>
           <button class="filter" type="button" data-filter="pro" role="tab" aria-selected="false" data-i18n="filterPro">Professionnel</button>
+          <button class="filter" type="button" data-filter="collector" role="tab" aria-selected="false" data-i18n="filterCollector">Collector</button>
         </div>
 
         <div class="product-grid">
@@ -203,6 +166,11 @@
             <h3 data-i18n="rangeToyTitle">Jouets variés</h3>
             <p data-i18n="rangeToyText">Figurines, construction, véhicules télécommandés, jeux d'imitation et nouveautés saisonnières.</p>
           </article>
+          <article class="product-card" id="collector" data-category="indoor collector">
+            <div class="card-icon">★</div>
+            <h3 data-i18n="rangeCollectorTitle">Collector</h3>
+            <p data-i18n="rangeCollectorText">Figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.</p>
+          </article>
           <article class="product-card" data-category="outdoor pro">
             <div class="card-icon">XL</div>
             <h3 data-i18n="rangePlayTitle">Playgrounds</h3>
@@ -212,34 +180,6 @@
             <div class="card-icon">SP</div>
             <h3 data-i18n="rangeSportTitle">Infrastructures sportives</h3>
             <p data-i18n="rangeSportText">Solutions pour terrains, parcours, équipements sportifs et zones d'activité extérieure.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section collector-section" id="collector">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="collectorEyebrow">Collector</p>
-          <h2 data-i18n="collectorTitle">Jeux collector et éditions spéciales</h2>
-          <p data-i18n="collectorText">
-            Une sélection dédiée aux passionnés : figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.
-          </p>
-        </div>
-
-        <div class="collector-grid" aria-label="Jeux collector disponibles chez Lotus D'or" data-i18n-aria="collectorGridAria">
-          <article class="collector-card">
-            <span>01</span>
-            <h3 data-i18n="collectorFiguresTitle">Figurines collector</h3>
-            <p data-i18n="collectorFiguresText">Personnages, univers thématiques et séries à compléter pour les enfants, parents et collectionneurs.</p>
-          </article>
-          <article class="collector-card">
-            <span>02</span>
-            <h3 data-i18n="collectorBuildTitle">Constructions & coffrets</h3>
-            <p data-i18n="collectorBuildText">Sets de construction, coffrets spéciaux et modèles à exposer ou à offrir.</p>
-          </article>
-          <article class="collector-card">
-            <span>03</span>
-            <h3 data-i18n="collectorVehiclesTitle">Véhicules & miniatures</h3>
-            <p data-i18n="collectorVehiclesText">Voitures, circuits, modèles réduits et collections pour les passionnés de véhicules.</p>
           </article>
         </div>
       </section>
@@ -521,6 +461,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="supabase-config.js"></script>
     <script src="products.js"></script>
-    <script src="script.js?v=collector-20260702"></script>
+    <script src="script.js?v=catalogue-collector-20260706"></script>
   </body>
 </html>

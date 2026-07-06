@@ -265,47 +265,8 @@ a {
   background: #ffffff;
 }
 
-.main-categories {
-  background: #ffffff;
-}
-
 .why-section {
   background: var(--cream);
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.category-card {
-  display: flex;
-  min-height: 150px;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 24px;
-  border: 1px solid rgba(127, 16, 24, 0.13);
-  border-radius: 8px;
-  background: var(--cream);
-  box-shadow: 0 14px 36px rgba(127, 16, 24, 0.08);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 46px rgba(127, 16, 24, 0.12);
-}
-
-.category-card span {
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 950;
-}
-
-.category-card strong {
-  font-size: clamp(1.35rem, 2.6vw, 2.2rem);
-  line-height: 1;
 }
 
 .intro-item span,
@@ -539,44 +500,6 @@ a {
   line-height: 1.6;
 }
 
-
-.collector-section {
-  background: linear-gradient(180deg, #ffffff, rgba(250, 242, 228, 0.75));
-}
-
-.collector-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.collector-card {
-  display: grid;
-  min-height: 230px;
-  align-content: space-between;
-  gap: 18px;
-  padding: clamp(22px, 3vw, 32px);
-  border: 1px solid rgba(127, 16, 24, 0.13);
-  border-radius: 8px;
-  background: #fff8eb;
-  box-shadow: 0 16px 42px rgba(127, 16, 24, 0.08);
-}
-
-.collector-card span {
-  color: var(--gold);
-  font-weight: 900;
-}
-
-.collector-card h3 {
-  margin: 0;
-  font-size: 1.45rem;
-}
-
-.collector-card p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
-}
 
 .brands-section {
   background: #ffffff;
@@ -1208,10 +1131,8 @@ textarea {
   }
 
   .intro-band,
-  .category-grid,
   .product-grid,
   .brand-grid,
-  .collector-grid,
   .live-product-grid,
   .location-map-layout,
   .section-heading,
@@ -1259,17 +1180,13 @@ textarea {
     padding-right: 16px;
   }
 
-  .brand-grid,
-  .collector-grid,
-  .category-grid {
+  .brand-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 420px) {
   .brand-grid,
-  .collector-grid,
-  .category-grid,
   .live-product-grid {
     grid-template-columns: 1fr;
   }
