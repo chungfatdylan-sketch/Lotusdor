@@ -1,0 +1,117 @@
+/* Strong brand-card refresh loaded after the main stylesheet. */
+.brand-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.brand-card {
+  position: relative !important;
+  min-height: 235px !important;
+  padding: 18px !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(127, 16, 24, 0.12) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8eb 100%) !important;
+  box-shadow: 0 14px 34px rgba(127, 16, 24, 0.08) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease !important;
+}
+
+.brand-card::before {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 6px !important;
+  content: "" !important;
+  background: var(--brand-accent, #bd111f) !important;
+}
+
+.brand-card::after {
+  position: absolute !important;
+  top: -52px !important;
+  right: -44px !important;
+  width: 128px !important;
+  height: 128px !important;
+  border-radius: 50% !important;
+  background: var(--brand-soft, rgba(189, 17, 31, 0.1)) !important;
+  content: "" !important;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(189, 17, 31, 0.24) !important;
+  box-shadow: 0 20px 46px rgba(127, 16, 24, 0.15) !important;
+}
+
+.brand-playmobil { --brand-accent: #1f9bd1; --brand-soft: rgba(31, 155, 209, 0.18); }
+.brand-lego { --brand-accent: #e3000b; --brand-soft: rgba(246, 196, 0, 0.26); }
+.brand-ravensburger { --brand-accent: #1457a8; --brand-soft: rgba(47, 143, 190, 0.18); }
+.brand-majorette { --brand-accent: #2447a8; --brand-soft: rgba(216, 36, 47, 0.16); }
+.brand-hasbro { --brand-accent: #11765f; --brand-soft: rgba(27, 131, 193, 0.17); }
+.brand-mattel { --brand-accent: #d71920; --brand-soft: rgba(230, 82, 61, 0.2); }
+.brand-vtech { --brand-accent: #4f9f55; --brand-soft: rgba(79, 159, 85, 0.18); }
+
+.brand-heading {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  width: 100% !important;
+  min-height: 62px !important;
+  align-items: center !important;
+  margin-bottom: 14px !important;
+}
+
+.brand-logo-img {
+  display: block !important;
+  width: auto !important;
+  max-width: min(172px, 100%) !important;
+  max-height: 56px !important;
+  object-fit: contain !important;
+}
+
+.brand-lego .brand-logo-img {
+  max-height: 66px !important;
+}
+
+.brand-card p {
+  position: relative !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+.brand-meta {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 7px !important;
+  margin-top: auto !important;
+  padding-top: 16px !important;
+}
+
+.brand-meta span {
+  min-height: 30px !important;
+  padding: 0 10px !important;
+  border: 1px solid rgba(127, 16, 24, 0.11) !important;
+  border-radius: 999px !important;
+  color: var(--deep-red) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 1180px) {
+  .brand-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 860px) {
+  .brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 420px) {
+  .brand-grid { grid-template-columns: 1fr !important; }
+}
