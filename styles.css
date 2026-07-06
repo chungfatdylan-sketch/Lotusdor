@@ -626,64 +626,19 @@ a {
 
 .brand-heading {
   display: flex;
+  min-height: 82px;
   align-items: center;
-  gap: 14px;
   margin-bottom: 18px;
 }
 
-.brand-logo {
-  display: inline-grid;
-  min-width: 72px;
-  min-height: 48px;
-  place-items: center;
-  padding: 8px 12px;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 950;
-  line-height: 1;
-  text-align: center;
-  box-shadow: 0 10px 24px rgba(127, 16, 24, 0.12);
+.brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: min(220px, 100%);
+  max-height: 68px;
+  object-fit: contain;
 }
 
-.logo-playmobil {
-  background: linear-gradient(135deg, #1f9bd1, #0756a6);
-}
-
-.logo-lego {
-  border: 3px solid #f6c400;
-  color: #ffffff;
-  background: #d71920;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.24);
-}
-
-.logo-ravensburger {
-  background: linear-gradient(135deg, #2f8fbe, #1457a8);
-}
-
-.logo-majorette {
-  background: linear-gradient(135deg, #2447a8, #d8242f);
-}
-
-.logo-hasbro {
-  border-radius: 14px 8px 14px 8px;
-  background: linear-gradient(135deg, #1b83c1, #11765f);
-}
-
-.logo-mattel {
-  min-width: 58px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--coral), var(--red));
-}
-
-.logo-vtech {
-  background: linear-gradient(135deg, #4f9f55, #0f6f5d);
-}
-
-.brand-card h3 {
-  margin: 0;
-  font-size: 1.35rem;
-}
 
 .brand-card p {
   margin: 0;
