@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lotus D'or | Collector</title>
+    <meta
+      name="description"
+      content="Découvrez les jeux collector, coffrets, figurines, véhicules et éditions spéciales disponibles chez Lotus D'or à Maurice."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/hero-storefront-wide-retouched.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css?v=internal-pages-20260707" />
+    <link rel="stylesheet" href="brand-cards.css?v=20260706b" />
+  </head>
+  <body class="inner-page">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Lotus D'or accueil" data-i18n-aria="brandAria">
+        <img class="brand-logo-mark" src="assets/logo-lotus-dor.png" alt="" />
+        <span>
+          <strong>Lotus D'or</strong>
+          <small data-i18n="brandLine">Jouets & playgrounds</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle data-i18n-aria="openMenu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" data-nav>
+        <a href="index.html" data-i18n="navHome">Accueil</a>
+        <a href="produits.html" data-i18n="navProducts">Produits</a>
+        <a href="collector.html" data-i18n="navCollector">Collector</a>
+        <a href="baby-products.html" data-i18n="navBabyProducts">Produits bébé</a>
+        <a href="about.html" data-i18n="navAbout">À propos</a>
+        <a href="stores.html" data-i18n="navStores">Magasins</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">EN</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="eyebrow" data-i18n="collectorEyebrow">Collector</p>
+          <h1 data-i18n="collectorTitle">Jeux collector et éditions spéciales</h1>
+          <p data-i18n="collectorText">Une sélection dédiée aux passionnés : figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.</p>
+        </div>
+      </section>
+
+      <section class="section collector-page-section" id="collector">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="collectorEyebrow">Collector</p>
+          <h2 data-i18n="collectorTitle">Jeux collector et éditions spéciales</h2>
+          <p data-i18n="collectorText">Une sélection dédiée aux passionnés : figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.</p>
+        </div>
+        <div class="product-grid collector-product-grid">
+          <article class="product-card" id="collector" data-category="indoor collector">
+            <div class="card-icon">★</div>
+            <h3 data-i18n="rangeCollectorTitle">Collector</h3>
+            <p data-i18n="rangeCollectorText">Figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section brands-section" id="marques">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="brandsEyebrow">Featured brands</p>
+          <h2 data-i18n="brandsTitle">Des marques reconnues que les familles connaissent déjà</h2>
+          <p data-i18n="brandsText">
+            Retrouvez chez Lotus D'or une sélection de marques internationales pour les jouets, les jeux, l'éveil, les
+            collections et les loisirs.
+          </p>
+        </div>
+
+        <div class="brand-toolbar" aria-label="Types de marques" data-i18n-aria="brandTypesAria">
+          <span data-i18n="brandToolbarOne">Marques représentées</span>
+          <span data-i18n="brandToolbarTwo">Disponibles dans nos shops</span>
+          <span data-i18n="brandToolbarThree">Produits par marque à venir</span>
+        </div>
+
+        <div class="brand-grid" aria-label="Marques disponibles chez Lotus D'or" data-i18n-aria="brandsGridAria">
+          <article class="brand-card brand-playmobil">
+            <div class="brand-heading" aria-label="Playmobil">
+              <img class="brand-logo-img" src="assets/brands/playmobil.svg" alt="Playmobil" loading="lazy" />
+            </div>
+            <p data-i18n="brandPlaymobilText">Univers de figurines, jeux d'imagination et coffrets thématiques pour enfants.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagFigures">Figurines</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-lego">
+            <div class="brand-heading" aria-label="LEGO">
+              <img class="brand-logo-img" src="assets/brands/lego-real-20260706.png" alt="LEGO" loading="lazy" />
+            </div>
+            <p data-i18n="brandLegoText">Jeux de construction, créativité, collections enfants et activités familiales.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagConstruction">Construction</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-ravensburger">
+            <div class="brand-heading" aria-label="Ravensburger">
+              <img class="brand-logo-img" src="assets/brands/ravensburger.svg" alt="Ravensburger" loading="lazy" />
+            </div>
+            <p data-i18n="brandRavensburgerText">Puzzles, jeux éducatifs et jeux de société pour apprendre et jouer ensemble.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagPuzzles">Puzzles & jeux</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-majorette">
+            <div class="brand-heading" aria-label="Majorette">
+              <img class="brand-logo-img" src="assets/brands/majorette.png" alt="Majorette" loading="lazy" />
+            </div>
+            <p data-i18n="brandMajoretteText">Voitures miniatures, circuits, véhicules et collections pour enfants passionnés.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagVehicles">Véhicules</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-hasbro">
+            <div class="brand-heading" aria-label="Hasbro">
+              <img class="brand-logo-img" src="assets/brands/hasbro.svg" alt="Hasbro" loading="lazy" />
+            </div>
+            <p data-i18n="brandHasbroText">Jeux de société, figurines, jeux d'action et classiques pour toute la famille.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagGamesFigures">Jeux & figurines</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-mattel">
+            <div class="brand-heading" aria-label="Mattel">
+              <img class="brand-logo-img" src="assets/brands/mattel.svg" alt="Mattel" loading="lazy" />
+            </div>
+            <p data-i18n="brandMattelText">Jouets emblématiques, véhicules, poupées, jeux et nouveautés pour enfants.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagVariousToys">Jouets variés</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+          <article class="brand-card brand-vtech">
+            <div class="brand-heading" aria-label="VTech">
+              <img class="brand-logo-img" src="assets/brands/vtech.svg" alt="VTech" loading="lazy" />
+            </div>
+            <p data-i18n="brandVtechText">Jouets électroniques, éveil, apprentissage et produits éducatifs interactifs.</p>
+            <div class="brand-meta">
+              <span data-i18n="tagEducational">Éducatif</span>
+              <span data-i18n="tagProductsSoon">Produits bientôt</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Lotus D'or</span>
+        <span data-i18n="footerText">Distribution de jouets, playgrounds et infrastructures sportives à l'île Maurice</span>
+      </div>
+      <div class="footer-socials" aria-label="Réseaux sociaux Lotus D'or" data-i18n-aria="socialAria">
+        <a href="https://www.facebook.com/profile.php?id=100063564880694" target="_blank" rel="noreferrer" aria-label="Facebook Lotus D'or" data-i18n-aria="facebookAria">Facebook</a>
+        <a href="https://www.instagram.com/lotusdormauritius/" target="_blank" rel="noreferrer" aria-label="Instagram Lotus D'or" data-i18n-aria="instagramAria">Instagram</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="products.js"></script>
+    <script src="script.js?v=internal-pages-20260707"></script>
+  </body>
+</html>
