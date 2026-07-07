@@ -11,7 +11,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="assets/hero-storefront-wide-retouched.png" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="styles.css?v=internal-pages-20260707" />
+    <link rel="stylesheet" href="styles.css?v=cta-20260707" />
     <link rel="stylesheet" href="brand-cards.css?v=20260706b" />
   </head>
   <body class="inner-page">
@@ -35,6 +35,7 @@
         <a href="about.html" data-i18n="navAbout">À propos</a>
         <a href="stores.html" data-i18n="navStores">Magasins</a>
         <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a class="nav-cta" href="https://wa.me/23000000000" target="_blank" rel="noreferrer" data-i18n="navCta">WhatsApp</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">EN</button>
       </nav>
     </header>
@@ -45,6 +46,18 @@
           <p class="eyebrow" data-i18n="productsPageEyebrow">Produits</p>
           <h1 data-i18n="productsPageTitle">Catalogue Lotus D’or</h1>
           <p data-i18n="productsPageText">Explorez les gammes disponibles et les produits publiés par l’équipe Lotus D’or.</p>
+        </div>
+      </section>
+
+      <section class="cta-strip" aria-label="Demande produit Lotus D'or" data-i18n-aria="productCtaAria">
+        <div>
+          <p class="eyebrow" data-i18n="productCtaEyebrow">Un produit précis ?</p>
+          <h2 data-i18n="productCtaTitle">Demandez conseil avant de vous déplacer.</h2>
+          <p data-i18n="productCtaText">Notre équipe peut vous orienter vers la bonne gamme, la bonne marque ou le magasin le plus adapté.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button primary" href="https://wa.me/23000000000" target="_blank" rel="noreferrer" data-i18n="ctaWhatsapp">Écrire sur WhatsApp</a>
+          <a class="button secondary" href="stores.html" data-i18n="ctaStores">Trouver un magasin</a>
         </div>
       </section>
 
@@ -271,6 +284,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="supabase-config.js"></script>
     <script src="products.js"></script>
-    <script src="script.js?v=internal-pages-20260707"></script>
+    <script src="script.js?v=cta-20260707"></script>
   </body>
 </html>

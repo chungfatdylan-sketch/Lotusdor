@@ -11,7 +11,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="assets/hero-storefront-wide-retouched.png" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="styles.css?v=internal-pages-20260707" />
+    <link rel="stylesheet" href="styles.css?v=cta-20260707" />
     <link rel="stylesheet" href="brand-cards.css?v=20260706b" />
   </head>
   <body class="inner-page">
@@ -35,6 +35,7 @@
         <a href="about.html" data-i18n="navAbout">À propos</a>
         <a href="stores.html" data-i18n="navStores">Magasins</a>
         <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a class="nav-cta" href="https://wa.me/23000000000" target="_blank" rel="noreferrer" data-i18n="navCta">WhatsApp</a>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">EN</button>
       </nav>
     </header>
@@ -45,6 +46,18 @@
           <p class="eyebrow" data-i18n="collectorEyebrow">Collector</p>
           <h1 data-i18n="collectorTitle">Jeux collector et éditions spéciales</h1>
           <p data-i18n="collectorText">Une sélection dédiée aux passionnés : figurines, coffrets, constructions, véhicules, puzzles et jeux en édition spéciale ou à collectionner.</p>
+        </div>
+      </section>
+
+      <section class="cta-strip" aria-label="Collector Lotus D'or" data-i18n-aria="collectorCtaAria">
+        <div>
+          <p class="eyebrow" data-i18n="collectorCtaEyebrow">Éditions spéciales</p>
+          <h2 data-i18n="collectorCtaTitle">Vous recherchez une pièce collector ?</h2>
+          <p data-i18n="collectorCtaText">Envoyez-nous la marque ou le type de coffret recherché, nous vous guidons selon les arrivages.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button primary" href="https://wa.me/23000000000" target="_blank" rel="noreferrer" data-i18n="ctaWhatsapp">Écrire sur WhatsApp</a>
+          <a class="button secondary" href="produits.html" data-i18n="ctaCatalogue">Voir le catalogue</a>
         </div>
       </section>
 
@@ -169,6 +182,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="supabase-config.js"></script>
     <script src="products.js"></script>
-    <script src="script.js?v=internal-pages-20260707"></script>
+    <script src="script.js?v=cta-20260707"></script>
   </body>
 </html>
