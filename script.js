@@ -4,6 +4,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const productCards = document.querySelectorAll("[data-category]");
 const languageToggle = document.querySelector("[data-language-toggle]");
+const contactForms = document.querySelectorAll("[data-contact-form]");
 
 const translations = {
   fr: {
@@ -201,6 +202,11 @@ const translations = {
     formNeed: "Type de besoin",
     formMessage: "Message",
     formSubmit: "Envoyer la demande",
+    contactFormSubject: "Demande depuis le site Lotus D'or",
+    contactFormNameLine: "Nom",
+    contactFormContactLine: "Contact",
+    contactFormNeedLine: "Type de besoin",
+    contactFormMessageLine: "Message",
     socialAria: "Réseaux sociaux Lotus D'or",
     facebookAria: "Facebook Lotus D'or",
     instagramAria: "Instagram Lotus D'or",
@@ -433,6 +439,11 @@ const translations = {
     formNeed: "Type of need",
     formMessage: "Message",
     formSubmit: "Send request",
+    contactFormSubject: "Request from the Lotus D'or website",
+    contactFormNameLine: "Name",
+    contactFormContactLine: "Contact",
+    contactFormNeedLine: "Type of need",
+    contactFormMessageLine: "Message",
     socialAria: "Lotus D'or social media",
     facebookAria: "Lotus D'or Facebook",
     instagramAria: "Lotus D'or Instagram",
@@ -628,4 +639,32 @@ filterButtons.forEach((button) => {
 languageToggle?.addEventListener("click", () => {
   currentLanguage = currentLanguage === "fr" ? "en" : "fr";
   applyLanguage(currentLanguage);
+});
+
+contactForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const dictionary = translations[currentLanguage] || translations.fr;
+    const formData = new FormData(form);
+    const name = formData.get("Nom") || "";
+    const contact = formData.get("Contact") || "";
+    const need = formData.get("Besoin") || "";
+    const message = formData.get("Message") || "";
+    const body = [
+      `${dictionary.contactFormNameLine}: ${name}`,
+      `${dictionary.contactFormContactLine}: ${contact}`,
+      `${dictionary.contactFormNeedLine}: ${need}`,
+      "",
+      `${dictionary.contactFormMessageLine}:`,
+      message,
+    ].join("\n");
+
+    const params = new URLSearchParams({
+      subject: dictionary.contactFormSubject,
+      body,
+    });
+
+    window.location.href = `mailto:lotusdor1971@gmail.com?${params.toString()}`;
+  });
 });
