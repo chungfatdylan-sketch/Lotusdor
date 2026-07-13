@@ -77,9 +77,19 @@
               <input name="price" type="number" min="0" step="1" placeholder="Ex: 1250" />
             </label>
             <label>
+              Image du produit
+              <input name="image_file" type="file" accept="image/*" />
+              <span class="field-help">Choisissez une image depuis l'ordinateur. Elle sera envoyée dans Supabase.</span>
+            </label>
+            <label>
               URL image
               <input name="image_url" type="url" placeholder="https://..." />
+              <span class="field-help">Optionnel : collez une URL si vous ne voulez pas uploader de fichier.</span>
             </label>
+            <div class="image-preview" data-image-preview hidden>
+              <img src="" alt="Aperçu du produit" />
+              <span>Aperçu de l'image</span>
+            </div>
             <label>
               Description
               <textarea name="description" rows="4"></textarea>
