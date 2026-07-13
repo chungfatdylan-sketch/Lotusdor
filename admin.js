@@ -21,6 +21,22 @@ const setMessage = (element, message) => {
   element.textContent = message || "";
 };
 
+
+const friendlyDatabaseError = (message) => {
+  if (!message) return "";
+  const lowerMessage = message.toLowerCase();
+
+  if (lowerMessage.includes("could not find the table") || lowerMessage.includes("schema cache")) {
+    return "La table produits n'existe pas encore dans Supabase. Ouvre Supabase > SQL Editor, exécute le fichier supabase-schema.sql, puis recharge cette page.";
+  }
+
+  if (lowerMessage.includes("bucket not found") || lowerMessage.includes("product-images")) {
+    return "Le stockage des images n'est pas encore configuré. Exécute aussi la partie Storage du fichier supabase-schema.sql dans Supabase SQL Editor.";
+  }
+
+  return message;
+};
+
 const friendlyAuthError = (message) => {
   if (!message) return "";
   if (message.toLowerCase().includes("invalid login credentials")) {
@@ -123,7 +139,7 @@ const loadAdminProducts = async () => {
     .order("created_at", { ascending: false });
 
   if (error) {
-    productList.innerHTML = `<p class="admin-message">${error.message}</p>`;
+    productList.innerHTML = `<p class="admin-message">${friendlyDatabaseError(error.message)}</p>`;
     return;
   }
 
@@ -175,7 +191,7 @@ const loadAdminProducts = async () => {
     button.addEventListener("click", async () => {
       const { error: deleteError } = await adminClient.from("products").delete().eq("id", button.dataset.delete);
       if (deleteError) {
-        setMessage(productMessage, deleteError.message);
+        setMessage(productMessage, friendlyDatabaseError(deleteError.message));
         return;
       }
       resetProductForm();
@@ -248,7 +264,7 @@ productForm.addEventListener("submit", async (event) => {
   const { error } = await request;
 
   if (error) {
-    setMessage(productMessage, error.message);
+    setMessage(productMessage, friendlyDatabaseError(error.message));
     return;
   }
 
