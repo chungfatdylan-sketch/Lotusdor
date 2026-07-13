@@ -1372,3 +1372,17 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+
+.footer-admin-link {
+  padding: 7px 12px;
+  border: 1px solid rgba(127, 16, 24, 0.16);
+  border-radius: 999px;
+  color: var(--red);
+  background: rgba(255, 248, 235, 0.72);
+  font-weight: 900;
+}
+
+.footer-admin-link:hover {
+  background: #ffffff;
+}
