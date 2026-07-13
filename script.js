@@ -514,6 +514,7 @@ const applyLanguage = (language) => {
   }
 
   refreshStoreMapLanguage(language);
+  window.renderLotusProductsForLanguage?.(language);
   localStorage.setItem("lotusdor-language", language);
 };
 

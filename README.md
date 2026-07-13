@@ -20,6 +20,6 @@ Le site est connecté à Supabase pour afficher les produits publiés.
 1. Dans Supabase, ouvrir SQL Editor.
 2. Exécuter le fichier `supabase-schema.sql`.
 3. Dans Authentication > Users, créer un utilisateur pour l'administrateur avec son email et son mot de passe. Identifiant admin prévu : `lotudor1971@gmail.com`. Ne pas mettre le mot de passe dans le code ou dans GitHub.
-4. Aller sur `/admin.html` pour ajouter, modifier ou supprimer des produits. Le formulaire admin permet aussi d’uploader une image depuis son ordinateur.
+4. Aller sur `/admin.html` pour ajouter, modifier ou supprimer des produits. Le formulaire admin permet aussi d’uploader une image depuis son ordinateur et de renseigner une description française et une description anglaise.
 
 La clé privée Supabase ne doit jamais être ajoutée au code du site.

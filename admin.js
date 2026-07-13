@@ -129,6 +129,7 @@ const productPayloadFromForm = (imageUrl = "") => ({
   price: productForm.elements.price.value ? Number(productForm.elements.price.value) : null,
   image_url: imageUrl || productForm.elements.image_url.value.trim(),
   description: productForm.elements.description.value.trim(),
+  description_en: productForm.elements.description_en.value.trim(),
   is_published: productForm.elements.is_published.checked,
 });
 
@@ -181,6 +182,7 @@ const loadAdminProducts = async () => {
       productForm.elements.image_url.value = product.image_url || "";
       productForm.elements.image_file.value = "";
       productForm.elements.description.value = product.description || "";
+      productForm.elements.description_en.value = product.description_en || "";
       productForm.elements.is_published.checked = Boolean(product.is_published);
       updateImagePreview(product.image_url || "");
       setMessage(productMessage, "Produit prêt à modifier.");

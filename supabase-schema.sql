@@ -4,12 +4,15 @@ create table if not exists public.products (
   brand text not null,
   category text,
   description text,
+  description_en text,
   price numeric,
   image_url text,
   is_published boolean not null default true,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.products add column if not exists description_en text;
 
 alter table public.products enable row level security;
 

@@ -1,4 +1,5 @@
 const productGrid = document.querySelector("[data-products-grid]");
+let loadedProducts = [];
 
 const createSupabaseClient = () => {
   if (!window.supabase || !window.LOTUS_SUPABASE) return null;
@@ -8,6 +9,8 @@ const createSupabaseClient = () => {
     window.LOTUS_SUPABASE.publishableKey
   );
 };
+
+const getProductLanguage = () => localStorage.getItem("lotusdor-language") || document.documentElement.lang || "fr";
 
 const formatPrice = (price) => {
   if (price === null || price === undefined || price === "") return "";
@@ -22,7 +25,15 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
-const productCardTemplate = (product) => {
+const productDescription = (product, language) => {
+  if (language === "en") {
+    return product.description_en || "Product available at Lotus D'or.";
+  }
+
+  return product.description || "Produit disponible chez Lotus D'or.";
+};
+
+const productCardTemplate = (product, language = getProductLanguage()) => {
   const image = escapeHtml(product.image_url || "assets/hero-lotus-dor.svg");
   const price = formatPrice(product.price);
 
@@ -31,16 +42,23 @@ const productCardTemplate = (product) => {
       <img src="${image}" alt="${escapeHtml(product.name)}" loading="lazy" />
       <div class="live-product-card-body">
         <h3>${escapeHtml(product.name)}</h3>
-        <p>${escapeHtml(product.description || "Produit disponible chez Lotus D'or.")}</p>
+        <p>${escapeHtml(productDescription(product, language))}</p>
         <div class="live-product-meta">
           <span>${escapeHtml(product.brand || "Lotus D'or")}</span>
-          <span>${escapeHtml(product.category || "Jouets")}</span>
+          <span>${escapeHtml(product.category || (language === "en" ? "Toys" : "Jouets"))}</span>
           ${price ? `<span>${price}</span>` : ""}
         </div>
       </div>
     </article>
   `;
 };
+
+const renderProducts = (language = getProductLanguage()) => {
+  if (!productGrid || !loadedProducts.length) return;
+  productGrid.innerHTML = loadedProducts.map((product) => productCardTemplate(product, language)).join("");
+};
+
+window.renderLotusProductsForLanguage = renderProducts;
 
 const loadProducts = async () => {
   if (!productGrid) return;
@@ -50,13 +68,14 @@ const loadProducts = async () => {
 
   const { data, error } = await client
     .from("products")
-    .select("id,name,brand,category,description,price,image_url")
+    .select("id,name,brand,category,description,description_en,price,image_url")
     .eq("is_published", true)
     .order("created_at", { ascending: false });
 
   if (error || !data?.length) return;
 
-  productGrid.innerHTML = data.map(productCardTemplate).join("");
+  loadedProducts = data;
+  renderProducts();
 };
 
 loadProducts();
