@@ -133,6 +133,11 @@ const productPayloadFromForm = (imageUrl = "") => ({
   is_published: productForm.elements.is_published.checked,
 });
 
+const payloadWithoutEnglishDescription = (payload) => {
+  const { description_en, ...fallbackPayload } = payload;
+  return fallbackPayload;
+};
+
 const loadAdminProducts = async () => {
   const { data, error } = await adminClient
     .from("products")
@@ -259,11 +264,16 @@ productForm.addEventListener("submit", async (event) => {
   }
 
   const payload = productPayloadFromForm(uploadedImageUrl);
-  const request = id
-    ? adminClient.from("products").update(payload).eq("id", id)
-    : adminClient.from("products").insert(payload);
+  const saveProduct = (productPayload) =>
+    id
+      ? adminClient.from("products").update(productPayload).eq("id", id)
+      : adminClient.from("products").insert(productPayload);
 
-  const { error } = await request;
+  let { error } = await saveProduct(payload);
+
+  if (error && error.message?.toLowerCase().includes("description_en")) {
+    ({ error } = await saveProduct(payloadWithoutEnglishDescription(payload)));
+  }
 
   if (error) {
     setMessage(productMessage, friendlyDatabaseError(error.message));

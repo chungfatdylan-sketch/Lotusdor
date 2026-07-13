@@ -60,17 +60,29 @@ const renderProducts = (language = getProductLanguage()) => {
 
 window.renderLotusProductsForLanguage = renderProducts;
 
+const queryPublishedProducts = (client, columns) =>
+  client
+    .from("products")
+    .select(columns)
+    .eq("is_published", true)
+    .order("created_at", { ascending: false });
+
 const loadProducts = async () => {
   if (!productGrid) return;
 
   const client = createSupabaseClient();
   if (!client) return;
 
-  const { data, error } = await client
-    .from("products")
-    .select("id,name,brand,category,description,description_en,price,image_url")
-    .eq("is_published", true)
-    .order("created_at", { ascending: false });
+  let { data, error } = await queryPublishedProducts(
+    client,
+    "id,name,brand,category,description,description_en,price,image_url"
+  );
+
+  if (error && error.message?.toLowerCase().includes("description_en")) {
+    const fallback = await queryPublishedProducts(client, "id,name,brand,category,description,price,image_url");
+    data = fallback.data?.map((product) => ({ ...product, description_en: "" }));
+    error = fallback.error;
+  }
 
   if (error || !data?.length) return;
 
